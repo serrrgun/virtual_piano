@@ -1,0 +1,23 @@
+@import '~normalize.css';
+
+// FONTS
+@import './fonts.scss';
+
+// VARIABLES
+
+// Global
+
+@import 'components/global';
+
+// FILES
+
+@import 'components/blocks/main';
+@import 'components/blocks/piano';
+@import 'components/blocks/controls';
+@import 'components/blocks/header';
+@import 'components/blocks/footer';
+
+
+
+
+

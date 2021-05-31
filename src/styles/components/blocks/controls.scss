@@ -1,0 +1,74 @@
+.controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+
+    &__button {
+        width: 150px;
+        height: 40px;
+        padding: 0 10px;
+        margin-right: 10px;
+        background-color: #454c53;
+        border: 0;
+        border-radius: 2px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        outline: 0;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
+
+        &--active {
+            background-color: #00b4a4;
+
+            &:hover {
+                background-color: #00c9b7;
+            }
+        }
+
+        &:not(.controls__button--active):hover {
+            background-color: #515961;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 120px;
+        }
+    }
+
+    &__fullsize {
+        position: absolute;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 0;
+        outline: 0;
+        background-size: contain;
+        transition: 0.3s;
+        cursor: pointer;
+        background-image: url(../assets/images/fullscreen-open.svg);
+
+        &--active {
+            background-image: url(../assets/images/fullscreen-exit.svg);
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media screen and (max-width: 767px) {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+    }
+}
